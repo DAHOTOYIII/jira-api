@@ -20,7 +20,7 @@ class JiraAPI():
 
     def _get_issue_details(self):
         payload = {}
-        request_url = f'{self.base_url}/rest/servicedeskapi/request'
+        request_url = f'{self.base_url}/sr/jira.issueviews:searchrequest-csv-all-fields/temp/SearchRequest.csv?jqlQuery='
         response = requests.request("GET", 
                                     url=request_url,
                                     auth=HTTPBasicAuth(self.username, self.password), 
